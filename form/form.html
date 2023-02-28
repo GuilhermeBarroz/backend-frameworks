@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Cadastro</title>
+</head>
+<body >
+    <main class="content">
+            <h1>Cadastro</h1>
+            <form method="post" id="form">
+                <div>
+                    <input type="text" name="nome" id="inome" placeholder="Digite seu nome" class="inputs required" oninput="nameValidate()">
+                    <span class="span-required">Nome deve ter no mínimo 3 caracteres.</span>
+                </div>
+                <div>
+                    <input type="text" name="date" id="idate" placeholder="Digite sua data de nascimento" maxlength="10" class="inputs required" oninput="addCaracteresData(), dateValidate()">
+                    <span class="span-required">Data invalida. Ex: xx/xx/xxxx</span>
+                </div>
+                <div>
+                    <input type="tel" name="tel" id="itel" placeholder="Digite seu telefone"  maxlength="14" class="inputs required" oninput="phoneValidate(), addCaracteresPhone()">
+                    <span class="span-required">O telefone deve ter 9 dígitos</span>
+                </div>
+                <div>
+                    <input type="text" name="profissao" id="iprofissao" placeholder="Digite sua profissão" class="inputs required" oninput="professionValidate()">
+                    <span class="span-required">Profissão deve ter no minimo 5 caracteres</span>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+    </main>
+    <footer>
+        <p>Desenvolvido por: <a href="https://github.com/GuilhermeBarroz" target="_blank">Guilherme Barros</a></p>
+    </footer>
+</body>
+<script src="form.js"></script>
+</html>
